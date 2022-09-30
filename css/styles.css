@@ -35,6 +35,26 @@ body {
 }
 .link {
   text-decoration: none;
+  padding-left: 0;
+}
+/* скидання стилыв та встановлення меж макету */
+.container {
+  width: 1200px;
+  outline: 1px solid green;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+.section {
+  padding: 94px 0px;
 }
 /* сховати заголовок */
 .visually-hidden {
@@ -51,9 +71,25 @@ body {
   overflow: hidden;
 }
 
-/* головна */
+/* шапка */
 .box {
   background-color: var(--up-white);
+  border-bottom: 1px solid var(--line-header);
+}
+.box .container {
+  display: flex;
+  align-items: center;
+}
+.box .nav {
+  display: flex;
+  align-items: center;
+}
+.box .list {
+  display: flex;
+  margin-left: auto;
+}
+.box .items + .items {
+  margin-left: 50px;
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -64,10 +100,16 @@ body {
 
   color: var(--activ);
 }
+.box .logo {
+  margin-right: 93px;
+}
 .web {
   color: var(--logo-text);
 }
 .item {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -92,13 +134,17 @@ body {
 .contact:focus {
   color: var(--activ);
 }
-/* шапка */
+/* головна */
 .page {
   background-color: var(--background-header-footer);
 
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .page-title {
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -109,6 +155,7 @@ body {
   text-transform: uppercase;
 }
 .page-button {
+  min-width: 216px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -142,6 +189,9 @@ body {
   color: var(--color-text);
 }
 /* Чим ми займаємось */
+.work.section {
+  padding-top: 0px;
+}
 .work-title {
   font-weight: 700;
   font-size: 36px;

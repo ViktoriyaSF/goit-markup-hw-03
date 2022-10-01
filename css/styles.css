@@ -34,8 +34,8 @@ body {
   list-style: none;
 }
 .link {
-  text-decoration: none;
   padding-left: 0;
+  text-decoration: none;
 }
 /* скидання стилыв та встановлення меж макету */
 .container {
@@ -110,6 +110,7 @@ ul {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -135,14 +136,14 @@ ul {
   color: var(--activ);
 }
 /* головна */
-.page {
+.hero {
   background-color: var(--background-header-footer);
 
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
-.page-title {
+.hero-title {
   margin-bottom: 30px;
 
   font-weight: 900;
@@ -154,7 +155,7 @@ ul {
 
   text-transform: uppercase;
 }
-.page-button {
+.hero-button {
   min-width: 216px;
   font-family: inherit;
   font-weight: 700;
@@ -168,12 +169,25 @@ ul {
 
   cursor: pointer;
 }
-.page-button:hover,
-.page-button:focus {
+.hero-button:hover,
+.hero-button:focus {
   background-color: var(--activ-button);
 }
 /* Наші переваги */
+.pluses .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pluses-item {
+  width: 270px;
+  margin-right: 30px;
+}
+.pluses-item:nth-child(4n) {
+  margin-right: 0;
+}
 .pluses-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -193,6 +207,8 @@ ul {
   padding-top: 0px;
 }
 .work-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -200,11 +216,17 @@ ul {
 
   text-align: center;
 }
+.work-items {
+  display: flex;
+  gap: 30px;
+}
 /* Наша команда */
 .team {
   background-color: var(--second-background);
 }
 .team-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -212,12 +234,35 @@ ul {
 
   text-align: center;
 }
+.team-list {
+  display: flex;
+}
 .team-bloc {
-  background-color: var(--up-white);
+  display: block;
+  margin-right: 30px;
   width: 270px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
   text-align: center;
+
+  background-color: var(--up-white);
+}
+.team-bloc:last-of-type {
+  margin-right: 0;
+}
+.team-thumb {
+  display: block;
+  overflow: hidden;
+}
+.team-items {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* border: 1px solid red; */
 }
 .team-name {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -269,6 +314,8 @@ ul {
 }
 /* Підвал */
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--background-header-footer);
 }
 .footer .logo {
